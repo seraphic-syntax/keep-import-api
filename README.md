@@ -1,4 +1,3 @@
-```markdown
 # Keep Import API
 
 A TypeScript/Koa microservice that ingests **Google Keep** exports produced by **Google Takeout**, parses the contained notes, and imports them into a **PostgreSQL** database via **Prisma ORM**.  
@@ -78,7 +77,6 @@ Provides a liveness/health indicator with timestamp.
 - **Validation:** `zod`
 - **Development tooling:** `ts-node`, `nodemon`, `tsconfig.json`
 
----
 
 ## 3. Data Model
 
@@ -86,7 +84,7 @@ Provides a liveness/health indicator with timestamp.
 
 Defined in `prisma/schema.prisma`:
 
-```prisma
+prisma
 generator client {
   provider = "prisma-client-js"
 }
@@ -118,7 +116,7 @@ model Note {
 
   @@map("notes")
 }
-```
+
 
 #### Notes:
 
@@ -127,7 +125,6 @@ model Note {
 - `Note.content` uses a `Text` column (suitable for large note bodies).
 - `createdAt` is preserved from the Keep data when possible (e.g., `dateCreated`), otherwise defaults to `now()`.
 
----
 
 ## 4. Google Keep Import Semantics
 
@@ -135,14 +132,12 @@ model Note {
 
 The implementation is tailored to the standard Google Takeout structure for Keep:
 
-```
 Takeout/
 └── Keep/
     ├── Some Note Title.html
     ├── Some Note Title.json
     ├── some-image.png
     └── ...
-```
 
 The parser focuses on:
 
