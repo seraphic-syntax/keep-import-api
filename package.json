@@ -1,0 +1,40 @@
+{
+  "name": "keep-import-api",
+  "version": "1.0.0",
+  "description": "Google Keep Takeout import API for warpSpeed",
+  "main": "dist/app.js",
+  "scripts": {
+    "dev": "npx nodemon",
+    "build": "npx tsc",
+    "start": "node dist/app.js",
+    "prisma:generate": "npx prisma generate",
+    "prisma:migrate": "npx prisma migrate dev",
+    "prisma:push": "npx prisma db push",
+    "prisma:studio": "npx prisma studio"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@koa/router": "^12.0.1",
+    "@prisma/client": "^5.17.0",
+    "adm-zip": "^0.5.14",
+    "cheerio": "^1.0.0-rc.12",
+    "koa": "^2.15.3",
+    "koa-body": "^6.0.1",
+    "prisma": "^5.17.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/adm-zip": "^0.5.5",
+    "@types/koa": "^2.13.5",
+    "@types/koa__router": "^8.0.11",
+    "@types/node": "^20.14.0",
+    "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
+}
