@@ -8,7 +8,7 @@ The service is designed as a cleanly layered HTTP API with:
 - A utilities layer (Keep Takeout parser, validation)
 - A relational storage layer (PostgreSQL via Prisma)
 
-This document aims to be exhaustive and precise, suitable for technical assessment and grading.
+
 
 ---
 
