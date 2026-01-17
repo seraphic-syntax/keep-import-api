@@ -32,11 +32,9 @@ Clients upload a **Google Takeout ZIP file containing Keep data**. The system:
 6. Persists notes for the specified user via Prisma.
 7. Returns a summary of the import (count of notes imported).
 
-A second endpoint:
 
-- `GET /api/health`  
 
-Provides a liveness/health indicator with timestamp.
+- `GET /api/health`  provides a liveness/health indicator with timestamp.
 
 ---
 
